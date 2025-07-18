@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click n Code — Tejas Jalit</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/resposive.css" />
+    <link rel="stylesheet" href="css/contact-form.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">Portfoilo</div>
+        
+            <!-- Nav Items -->
+            <ul class="nav-items" id="navItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button class="btn">Login</button>
+                <button class="btn">Sign Up</button>
+            </ul>
+        </nav>
+
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h1>Contact <span class="highlight">Me!</span></h1>
+                    <p>Feel free to reach out by filling the form below</p>
+                </div>
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10,15}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required />
+                    </div>
+                    <div class="form-group colspan-2">
+                        <label for="message">Your Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <div class="error" id="messageError">.</div>
+                    </div>
+                    <div class="form-group colspan-2" style="text-align:center;">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                    <div id="successMessage" class="success-message">
+                        Thank you for your message! We'll get back to you soon.
+                    </div>
+                </form>
+
+                <div class="contact-info">
+                    
+                </div>
+            </div>
+        </section>
+
+    </div>
+<script src="js/main.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("5Wnh1HVYld08hEJQE"); // Replace
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm(
+            "service_qj3zdhn",    // Replace
+            "template_f9laa5j",    // Replace
+            this
+        ).then(
+            function () {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("contactForm").reset();
+            },
+            function (error) {
+                alert("Failed to send: " + JSON.stringify(error));
+                console.error("Error sending form:", error);
+            }
+        );
+    });
+</script>
+
+
+</body>
+
+</body>
+
+</html>
