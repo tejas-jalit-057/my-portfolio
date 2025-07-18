@@ -374,7 +374,7 @@ textarea:focus {
 
 
 .success-message {
-    grid-column: span 2;
+    grid-column: span 1;
     margin-top: 20px;
     padding: 15px;
     background-color: var(--text-color);
@@ -383,6 +383,7 @@ textarea:focus {
     font-weight: 600;
     text-align: center;
     display: none;
+    width: 360px;
 }
 
 @media (max-width: 768px) {
