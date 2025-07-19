@@ -443,7 +443,10 @@ textarea:focus {
 
 .about-section {
   padding: 20px;
-  width: 100%;
+  width: 90%;
+  margin-left:100px;
+  margin-right:100px;
+background-color:grey;
 }
 
 .about-section h1 {
@@ -462,7 +465,7 @@ textarea:focus {
 .intro p {
   font-size: 16px;
   margin-top: 10px;
-  max-width: 90%;
+  max-width: 85%;
   line-height: 1.5;
   text-align: justify;
 }
@@ -486,7 +489,7 @@ textarea:focus {
   flex-wrap: wrap;
   justify-content: space-between;
   flex: 1;
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
 .left-info, .right-info {
