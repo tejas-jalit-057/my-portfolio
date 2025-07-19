@@ -113,6 +113,103 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+/*------------------- about section ------------------- */
+
+
+@media (max-width: 768px) {
+.about-section {
+  padding: 0px;
+  width: 90%;
+  /* margin-left:100px; */
+  margin-right:100px;
+/* background-color:grey; */
+}
+
+.about-section h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  font-size: 25px;
+}
+
+.highlight {
+  color: var(--secondary-color);
+}
+
+.intro p {
+  font-size: 16px;
+  margin-top: 10px;
+  max-width: 85%;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  gap: 40px;
+}
+
+.profile-img img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1;
+  /* max-width: 600px; */
+}
+
+.left-info, .right-info {
+  flex: 1;
+  min-width: 150px;
+}
+
+.info p {
+  font-size: 16px;
+  margin: 10px 0;
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------------- ::content--------------- */
 
 @media (max-width: 768px) {
